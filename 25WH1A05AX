@@ -1,0 +1,18 @@
+package mypackage5ac;
+
+public class Pattern1 {
+	public static void main(String[] args) {
+		 int n =5;
+		// TODO Auto-generated method stub
+            for(int i=1;i<=n;i++)
+            {
+            	for(int j=5;j<=n;j--) {
+            		if(j<=n-i)
+            		System.out.print("*");
+            		else
+            	   System.out.print(" ");
+            	}
+System.out.println();
+}
+}
+}
