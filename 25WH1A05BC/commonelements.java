@@ -1,0 +1,63 @@
+package myproject5bc;
+
+import java.util.Scanner;
+
+public class commonelements {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input=new Scanner(System.in);
+
+		System.out.println("enter first array size:");
+
+		int n=input.nextInt();
+
+		int[] a=new int[n];
+
+		System.out.println("enter first array elements:");
+
+		for(int i=0;i<n;i++) {
+
+			a[i]=input.nextInt();
+
+			
+
+		}
+
+		System.out.println("enter second array size:");
+
+		int m=input.nextInt();
+
+		int[] b=new int[m];
+
+		System.out.println("enter second array elements:");
+
+		for(int j=0;j<m;j++) {
+
+			b[j]=input.nextInt();
+
+			
+
+		}
+
+		System.out.println("common elements:");
+
+		for(int i=0;i<n;i++) {
+
+			for(int j=0;j<m;j++) {
+
+				if(a[i]==b[j]) {
+
+					System.out.println(a[i]+" ");
+
+				}
+
+			}
+
+
+		
+
+	}
+
+	}
+}
