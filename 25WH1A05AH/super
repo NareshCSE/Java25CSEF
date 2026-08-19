@@ -1,0 +1,50 @@
+package welcome;
+class Parent{
+	Parent(){
+		System.out.println("parent default constructor");
+	}
+	Parent(String msg ){
+		this();//write first only it will execute first
+		System.out.println("parent parameterized constructor");
+	}
+	int addition(int a,int b) {
+		return a+b;
+	}
+	int add=10;
+}
+class Child extends Parent{
+	Child(){
+		super("hello");
+		System.out.println("child default constructor");
+	}
+	int sub(int a,int b) {
+		return a-b;
+	}
+	int add=100;
+	void getbalance() {
+		int add=1000;//highest priority given to local variable
+		System.out.println(add);//ans:1000
+		//use this key word inorder to access the variables out of method and inside class
+		System.out.println(this.add);
+		//in order access the parent variable use super key word
+		System.out.println(super.add);
+		//this
+	}
+	
+}
+
+public class Type1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//execution start from main method
+		Child obj1=new Child();//we creating object for child and accessing parent class and child class also
+		obj1.addition(29,45);
+		obj1.sub(2314,542);
+		obj1.getbalance();
+		
+
+	}
+
+}
+
