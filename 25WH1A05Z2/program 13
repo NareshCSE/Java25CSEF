@@ -1,0 +1,45 @@
+
+package mypackage5z2;
+
+abstract class Shape {
+    int a, b;
+
+    abstract void printArea();
+}
+
+class Rectangle extends Shape {
+    void printArea() {
+        System.out.println("Rectangle Area = " + (a * b));
+    }
+}
+
+class Triangle extends Shape {
+    void printArea() {
+        System.out.println("Triangle Area = " + (0.5 * a * b));
+    }
+}
+
+class Circle extends Shape {
+    void printArea() {
+        System.out.println("Circle Area = " + (3.14 * a * a));
+    }
+}
+
+public class program13 {
+    public static void main(String[] args) {
+
+        Rectangle r = new Rectangle();
+        r.a = 10;
+        r.b = 5;
+        r.printArea();
+
+        Triangle t = new Triangle();
+        t.a = 10;
+        t.b = 5;
+        t.printArea();
+
+        Circle c = new Circle();
+        c.a = 5;
+        c.printArea();
+    }
+}
