@@ -1,9 +1,7 @@
 package oopj_aa;
 
 import java.util.Scanner;
-//Custom Exception Class
 class PinMismatchException extends Exception {
- // Constructor passing message to super class (Exception)
  public PinMismatchException(String message) {
      super(message);
  }
@@ -13,7 +11,7 @@ public class pin {
  public static void main(String[] args) {
      Scanner scanner = new Scanner(System.in);
 
-     // Input Account Holder Name
+     
      System.out.print("Enter Account Holder Name: ");
      String name = scanner.nextLine();
 
@@ -21,7 +19,7 @@ public class pin {
      int attempts = 0;
      boolean success = false;
 
-     // Try up to 3 times
+   
      while (attempts < 3) {
          System.out.print("Enter PIN number: ");
          int pin = scanner.nextInt();
