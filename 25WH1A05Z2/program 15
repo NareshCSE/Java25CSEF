@@ -1,0 +1,56 @@
+package mypackage5z2;
+
+import java.util.Scanner;
+
+class PinMismatchException extends Exception {
+
+    PinMismatchException(String message) {
+        super(message);
+    }
+}
+
+public class program15 {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String name;
+        int correctPin = 9999;
+        int pin;
+        int attempts = 0;
+
+        System.out.print("Enter account holder name: ");
+        name = sc.nextLine();
+
+        while (attempts < 3) {
+
+            System.out.print("Enter PIN: ");
+            pin = sc.nextInt();
+
+            if (pin == correctPin) {
+                System.out.println("Welcome " + name);
+                System.out.println("PIN is correct");
+                break;
+            }
+            else {
+                attempts++;
+                System.out.println("Wrong PIN");
+            }
+
+            if (attempts == 3) {
+
+                try {
+                    throw new PinMismatchException(
+                        "Sorry, your Account Has been Locked."
+                    );
+                }
+                catch (PinMismatchException e) {
+                    System.out.println(e.getMessage());
+                }
+            }
+        }
+
+        sc.close();
+    }
+}
