@@ -1,0 +1,33 @@
+package myproject5bc;
+
+class CNSException extends Exception{
+
+	CNSException(){
+
+		System.out.println("credits are not found");
+
+	}
+
+}
+
+public class CreditsMain {
+
+
+
+	public static void main(String[] args) throws CNSException {
+
+		// TODO Auto-generated method stub
+
+		int credits=0;
+
+  if(credits<45) {
+
+	  throw new CNSException();
+
+  }
+
+	}
+
+
+
+}
