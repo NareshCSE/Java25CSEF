@@ -1,0 +1,53 @@
+package mypackage5cd;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class HashMapPhonetoName {
+
+	public static void main(String[] args) {
+		
+		Scanner input=new Scanner(System.in);
+		
+		HashMap<String,String> Phone_to_Name=new HashMap<>();
+		HashMap<String,String> Name_to_Phone=new HashMap<>();
+		
+		Name_to_Phone.put("Anusha","123456789");
+		Name_to_Phone.put("SriVyshnavi","813456789");
+		Name_to_Phone.put("Vyshnavi","953456789");
+		Name_to_Phone.put("Shruthi","783456789");
+		
+		Phone_to_Name.put("123456789", "Anusha");
+		Phone_to_Name.put("813456789", "SriVyshnavi");
+		Phone_to_Name.put( "953456789","Vyshanvi");
+		Phone_to_Name.put("783456789", "Shruthi");
+		
+		
+		
+		System.out.println("Enter a value:");
+		String value1=input.next();
+		
+		if(Name_to_Phone.containsKey(value1)) {
+			System.out.println("Phone Number:"+ Name_to_Phone.get(value1));
+		}
+		else { 
+			System.out.println("False");
+		
+		
+		}
+		System.out.println("Enter a value:");
+		String value2=input.next();
+		
+		if(Phone_to_Name.containsKey(value2)) {
+			System.out.println("Name:"+ Phone_to_Name.get(value2));
+		}
+		else { 
+			System.out.println("False");
+		
+		}
+
+		
+		
+
+	}
+
+}
