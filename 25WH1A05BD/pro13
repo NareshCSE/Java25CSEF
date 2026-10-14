@@ -1,0 +1,38 @@
+package mypackage5bd;
+abstract class shape{
+	int length=56;
+	int breadth=78;
+	abstract void printarea();
+}
+
+class rectangle extends shape{
+	public void printarea() {
+		System.out.println("rectangle="+length*breadth);
+		
+	}
+}
+class triangle extends shape{
+	public void printarea() {
+		System.out.println("triangle="+(length*breadth)/2);
+
+	}
+}
+class circle extends shape{
+	public void printarea() {
+		System.out.println("circle whose radius is="+(2*3.14*length*breadth));
+		
+	}
+}
+public class Shape {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		rectangle r=new rectangle();
+		r.printarea();
+		triangle t=new triangle();
+		t.printarea();
+		circle c=new circle();
+		c.printarea();
+	}
+
+}
