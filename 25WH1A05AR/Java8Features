@@ -1,0 +1,17 @@
+package mypackage5ar;
+
+@FunctionalInterface
+interface Calci{
+	int operate(int num1, int num2);
+}
+
+public class Java8Features {
+	public static void main(String[] args) {
+		Calci add = (num1,num2) -> num1+num2;
+		
+		Calci sub = (num1,num2) -> num1-num2;
+		
+		System.out.println(add.operate(234,546));
+		System.out.println(sub.operate(2345,456));
+	}
+}
